@@ -1,0 +1,452 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Harshita Maurya | Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background-color: #f4f9f9;
+            color: #263238;
+            line-height: 1.7;
+        }
+
+        /* Navigation */
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 9%;
+            background-color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+        }
+
+        nav h2 {
+            color: #167d7f;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #444;
+            margin-left: 22px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: #167d7f;
+        }
+
+        /* Hero Section */
+
+        .hero {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 70px 12%;
+            gap: 40px;
+        }
+
+        .hero-text {
+            max-width: 600px;
+        }
+
+        .hero-text .welcome {
+            color: #138a72;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            color: #167d7f;
+            margin: 12px 0;
+        }
+
+        .hero h3 {
+            font-size: 23px;
+            color: #555;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .profile-img {
+            width: 270px;
+            height: 270px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 7px solid white;
+            box-shadow: 0 8px 30px rgba(22,125,127,0.2);
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 11px 25px;
+            margin-right: 10px;
+            border-radius: 7px;
+            text-decoration: none;
+            background: #167d7f;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #105e60;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid #167d7f;
+            color: #167d7f;
+        }
+
+        .btn-outline:hover {
+            background: #167d7f;
+            color: white;
+        }
+
+        /* Common Sections */
+
+        section {
+            padding: 65px 12%;
+        }
+
+        .section-title {
+            text-align: center;
+            color: #167d7f;
+            font-size: 32px;
+            margin-bottom: 35px;
+        }
+
+        .card {
+            background: white;
+            padding: 28px;
+            border-radius: 12px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(22,125,127,0.12);
+        }
+
+        .card h3 {
+            color: #167d7f;
+            margin-bottom: 12px;
+        }
+
+        /* Education */
+
+        .education {
+            max-width: 750px;
+            margin: auto;
+            text-align: center;
+        }
+
+        .sgpa {
+            display: inline-block;
+            margin-top: 15px;
+            background: #e1f5ee;
+            color: #138a72;
+            padding: 7px 18px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        /* Skills */
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .skill {
+            background: white;
+            color: #167d7f;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .skill:hover {
+            background: #167d7f;
+            color: white;
+            transform: translateY(-4px);
+        }
+
+        /* Achievements */
+
+        .achievement-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 22px;
+        }
+
+        /* Contact */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact a {
+            color: #167d7f;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #167d7f;
+            color: white;
+            text-align: center;
+            padding: 22px;
+        }
+
+        /* Responsive Design */
+
+        @media (max-width: 768px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            nav a {
+                margin: 0 7px;
+                font-size: 13px;
+            }
+
+            .hero {
+                flex-direction: column-reverse;
+                text-align: center;
+                padding: 55px 7%;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .profile-img {
+                width: 200px;
+                height: 200px;
+            }
+
+            section {
+                padding: 50px 7%;
+            }
+
+            .achievement-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <h2>Harshita.</h2>
+
+        <div>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="hero" id="home">
+
+        <div class="hero-text">
+
+            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+
+            <h1>Hi, I'm Harshita Maurya</h1>
+
+            <h3>B.Tech CSE Student | Aspiring Developer</h3>
+
+            <p>
+                A passionate Computer Science student at SRMU,
+                interested in technology, programming,
+                web development and exploring new innovations.
+                I enjoy learning new skills and building projects
+                that solve real-world problems.
+            </p>
+
+            <a href="#contact" class="btn">Contact Me</a>
+
+            <a href="#about" class="btn btn-outline">Explore More</a>
+
+        </div>
+
+        <img src="HA_PHOTO.jpg"
+             alt="Harshita Maurya"
+             class="profile-img">
+
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+
+        <h2 class="section-title">About Me</h2>
+
+        <div class="card">
+
+            <p>
+                I am a second-year B.Tech Computer Science and
+                Engineering student at Shri Ramswaroop Memorial
+                University (SRMU).
+
+                I have an interest in programming, software
+                development and emerging technologies.
+
+                I believe in continuous learning, improving
+                my technical abilities and turning ideas into
+                meaningful projects.
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+
+        <h2 class="section-title">Education</h2>
+
+        <div class="card education">
+
+            <h3>Bachelor of Technology (B.Tech)</h3>
+
+            <p>Computer Science and Engineering</p>
+
+            <p>Shri Ramswaroop Memorial University (SRMU)</p>
+
+            <p>Currently Pursuing: 2nd Year</p>
+
+            <span class="sgpa">SGPA: 8.61</span>
+
+        </div>
+
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skills-container">
+
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">Python</span>
+            <span class="skill">C Programming</span>
+            <span class="skill">GitHub</span>
+            <span class="skill">Communication</span>
+
+        </div>
+
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements">
+
+        <h2 class="section-title">Achievements & Participation</h2>
+
+        <div class="achievement-container">
+
+            <div class="card">
+                <h3>Flipkart GRiD</h3>
+                <p>
+                    Participated in Flipkart GRiD,
+                    a national-level engineering and
+                    technology challenge.
+                </p>
+            </div>
+
+            <div class="card">
+                <h3>Smart India Hackathon</h3>
+                <p>
+                    Selected in the internal round of
+                    Smart India Hackathon (SIH).
+                </p>
+            </div>
+
+        </div>
+
+        <div style="text-align:center; margin-top:30px;">
+
+            <a href="image.png"
+               target="_blank"
+               class="btn">
+                View SIH Certificate
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+
+        <h2 class="section-title">Let's Connect!</h2>
+
+        <div class="card contact">
+
+            <p>
+                Interested in technology, collaborations
+                and new opportunities?
+            </p>
+
+            <p style="margin-top:15px;">
+                Email:
+                <a href="mailto:ms.harshitamaurya@gmail.com">
+                    ms.harshitamaurya@gmail.com
+                </a>
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>© 2026 Harshita Maurya | Designed with HTML & CSS</p>
+
+    </footer>
+
+</body>
+</html>
